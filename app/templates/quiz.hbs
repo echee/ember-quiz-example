@@ -1,0 +1,13 @@
+This is {{model.name}}
+<ul>
+{{#each model.questions as |question|}}
+	<li>
+		<fieldset>
+			{{question.question}}
+			{{#each question.answers as |answer|}}
+			<input type="radio" name="{{question.id}}" id="{{question.id}}_{{answer}}"> <label for="{{question.id}}_{{answer}}">{{answer}}</label>
+			{{/each}}
+		</fieldset>
+	</li>
+{{/each}}
+</ul>

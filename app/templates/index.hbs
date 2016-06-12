@@ -1,0 +1,7 @@
+<h1>List of Quizzes</h1>
+
+<ul>
+{{#each model as |quiz|}}	
+	{{#link-to 'quiz' quiz.id}}<li>{{quiz.name}}</li> {{/link-to}}
+{{/each}}
+</ul>
